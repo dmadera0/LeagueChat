@@ -14,7 +14,49 @@ if (!firebase.apps.length) {
 
 const db = firebase.firestore();
 
-const Firebase = {};
+const Firebase = {
+    getCurrentUser: () => {
+        return firebase.auth().currentUser
+    },
+
+    createUser: async (user) => {
+        try {
+            await firebase.auth().createUserWithEmailAndPassword(user.email,user.password)
+            const uid = Firebase.getCurrentUser().uid
+
+            await db.collection('users').doc(uid).set({
+                username: user.username,
+                email: user.email
+            })
+
+            delete user.password;
+
+            return { ...user, uid };
+        
+        } catch (error){
+            console.log("Error @createUser: ", error.message)
+        }
+    },
+
+    getBlob:async (uri) => {
+        return await new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+
+            xhr.onload = () => {
+                resolve(xhr.response)
+            };
+            xhr.onerror = () => {
+                reject(new TypeError("Network request failed."));
+            };
+
+            xhr.responseType = "blob";
+            xhr.open("Get", uri, true);
+            xhr.send(null);
+        });
+
+    },
+
+};
 
 const FirebaseProvider = (props) => {
     return <FirebaseContext.Provider value={Firebase}>{props.children}</FirebaseContext.Provider>;
