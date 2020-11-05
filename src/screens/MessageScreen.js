@@ -3,9 +3,9 @@ import { View, Text, StyleSheet } from "react-native"
 
 export default HomeScreen = () => {
     return (
-        <view style ={Style.container}>
+        <View style ={styles.container}>
             <Text>MessengerScreen</Text>
-        </view>
+        </View>
     )
 }
 
