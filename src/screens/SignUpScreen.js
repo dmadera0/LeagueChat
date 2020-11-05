@@ -90,6 +90,10 @@ const Main = styled.View`
     margin-top: 160px;
 `;
 
+const Auth = styled.View`
+    margin: 64px 32px 32px;
+`;
+
 const AuthContainer = styled.View`
     margin-bottom: 32px;
 `;
