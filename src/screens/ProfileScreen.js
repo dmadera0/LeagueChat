@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default PostScreen = () => {
+export default ProfileScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>Profile Screen</Text>
+            <Text>profile Screen</Text>
         </View>
     );
 };
@@ -16,3 +16,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
 });
+
+
+
