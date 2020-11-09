@@ -35,15 +35,15 @@ export default MainStackScreens = () => {
                     break;
 
                 case "Schedule":
-                    iconName = "ios-notifications";
+                    iconName = "ios-calendar";
                     break;
 
                 case "Profile":
                     iconName = "ios-person";
                     break;
 
-                default:
-                    iconName = "ios-home";
+                // default:
+                //     iconName = "ios-home";
 
             }
 
