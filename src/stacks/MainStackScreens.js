@@ -6,7 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import HomeScreen from "../screens/HomeScreen";
 import MessageScreen from "../screens/MessageScreen";
 // import PostScreen from "../screens/PostScreen";
-import NotificationScreen from "../screens/NotificationScreen";
+import ScheduleScreen from "../screens/ScheduleScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
 
@@ -34,16 +34,16 @@ export default MainStackScreens = () => {
                     iconName = "ios-chatboxes";
                     break;
 
-                case "Notification":
-                    iconName = "ios-notifications";
+                case "Schedule":
+                    iconName = "ios-calendar";
                     break;
 
                 case "Profile":
                     iconName = "ios-person";
                     break;
 
-                default:
-                    iconName = "ios-home";
+                // default:
+                //     iconName = "ios-home";
 
             }
 
@@ -59,7 +59,7 @@ export default MainStackScreens = () => {
             <MainStack.Screen name="Home" component={HomeScreen} />
             <MainStack.Screen name="Message" component={MessageScreen} />
             {/* <MainStack.Screen name="Post" component={PostScreen} /> */}
-            <MainStack.Screen name="Notification" component={NotificationScreen} />
+            <MainStack.Screen name="Schedule" component={ScheduleScreen} />
             <MainStack.Screen name="Profile" component={ProfileScreen} />
         </MainStack.Navigator>
     );

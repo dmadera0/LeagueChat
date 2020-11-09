@@ -1,5 +1,5 @@
 
-export default firebaseConfig = {
+export default {
   apiKey: "AIzaSyDWs6eZsE_cu9djpJurQvA1ouxIsx5CJIg",
   authDomain: "capstone-leaguechat-app.firebaseapp.com",
   databaseURL: "https://capstone-leaguechat-app.firebaseio.com",
