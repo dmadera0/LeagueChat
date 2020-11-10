@@ -5,6 +5,7 @@ export default ProfileScreen = () => {
     return (
         <View style={styles.container}>
             <Text>profile Screen</Text>
+            
         </View>
     );
 };
