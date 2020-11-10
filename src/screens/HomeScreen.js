@@ -5,7 +5,7 @@ export default HomeScreen = () => {
     return (
         <View style ={styles.container}>
             <Text style={styles.textContainer}>
-                HomeScreen
+                Anouncements
             </Text>
         </View>
     )
@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
         padding:30,
         marginTop: 10,
         height: 80,
-    backgroundColor: "#8022d9"   
+    // backgroundColor: "#8022d9",
+    alignItems:"center"   
     },
     textContainer:{
         flex: 1,
