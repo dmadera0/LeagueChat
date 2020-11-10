@@ -1,13 +1,19 @@
 import React from 'react'
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, Image } from "react-native"
+import announcement from '../images/announcement.png'
 
 export default HomeScreen = () => {
     return (
         <View style ={styles.container}>
-            <Text style={styles.textContainer}>
+            {/* <Text style={styles.textContainer}>
                 Anouncements
-            </Text>
+            </Text> */}
+            <View style ={styles.imageBackground}>
+                <Image source={announcement} style={styles.backgroundImage}/>
+                <Text style={styles.imageText}>                    Announcements!</Text>
+            </View>
         </View>
+        
     )
 }
 
@@ -15,7 +21,7 @@ export default HomeScreen = () => {
 const styles = StyleSheet.create({
     container: {
         padding:30,
-        marginTop: 10,
+        marginBottom: 10,
         height: 80,
     // backgroundColor: "#8022d9",
     alignItems:"center"   
@@ -25,5 +31,17 @@ const styles = StyleSheet.create({
         fontSize: 20,
         justifyContent: "center",
         alignItems: "center",
+    },
+    imageBackground:{
+        position: "absolute",
+        marginBottom: 10,
+        opacity: 0.5
+    },
+    imageText:{
+        fontSize: 30,
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+
     }
 })
