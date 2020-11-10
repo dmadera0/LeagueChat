@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 30,
+        
     },
     input: {
         height: 50,
