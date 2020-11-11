@@ -1,17 +1,21 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from "react-native"
 import announcement from '../images/announcement.png'
+import styled from "styled-components";
+import { color } from 'react-native-reanimated';
 
 export default HomeScreen = () => {
     return (
-        <View style ={styles.container}>
-            {/* <Text style={styles.textContainer}>
-                Anouncements
-            </Text> */}
+       <View style={ styles.container }>
+            
             <View style ={styles.imageBackground}>
                 <Image source={announcement} style={styles.backgroundImage}/>
-                <Text style={styles.imageText}>                    Announcements!</Text>
+                <Text style={styles.imageText}>                 Announcements!</Text>
             </View>
+            <HeaderGraphic>
+               <RightCircle/>
+               <LeftCircle/>
+           </HeaderGraphic>
         </View>
         
     )
@@ -20,22 +24,21 @@ export default HomeScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding:30,
-        marginBottom: 10,
-        height: 80,
-    // backgroundColor: "#8022d9",
-    alignItems:"center"   
-    },
-    textContainer:{
-        flex: 1,
-        fontSize: 20,
-        justifyContent: "center",
-        alignItems: "center",
+    backgroundColor: "#8f32a8",   
     },
     imageBackground:{
         position: "absolute",
-        marginBottom: 10,
-        opacity: 0.5
+        marginBottom: 1,
+        opacity: 0.5,
+        backgroundColor: "#ffff",
+        height: 1000,
+    },
+    backgroundImage:{
+        // width: 100,
+        // height: 100,
+        flex: 3,
+        resizeMode: 'cover',
+
     },
     imageText:{
         fontSize: 30,
@@ -44,4 +47,31 @@ const styles = StyleSheet.create({
         alignItems: "center",
 
     }
+
 })
+const RightCircle = styled.View`
+background-color: #8022d9;
+position: absolute;
+width: 400px;
+height: 400px;
+border-radius: 200px;
+right: -100px;
+top: -200px;
+`;
+
+const LeftCircle = styled.View`
+background-color: #23a6d5;
+position: absolute;
+width: 200px;
+height: 200px;
+border-radius: 100px;
+left: -50px;
+top: -50px;
+`;
+
+const HeaderGraphic = styled.View`
+position: absolute;
+width: 100%;
+top: -50px;
+z-index: -100;
+`;

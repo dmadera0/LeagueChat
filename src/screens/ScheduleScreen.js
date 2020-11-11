@@ -1,4 +1,4 @@
-import { Title } from 'native-base';
+import { Row, Title } from 'native-base';
 import React from 'react'
 import { View, StyleSheet } from "react-native"
 import {Card} from 'react-native-shadow-cards';
@@ -10,34 +10,35 @@ export default ScheduleScreen = () => {
     return (
         <View style={styles.container}>
             <Title style={styles.title}>Schedule</Title>
-        <Card style={{padding: 10, margin: 10}}>
-            <Title>Week 1</Title>
-            <Text>GitForked vs. OnlySpans</Text>
-            <Text>Damons Devs vs. Ahmeds Algos</Text>
-            <Text>Kyles KeyBoards vs. Jons JSONs</Text>
-            <Text>Kristines Kotlin vs. Brians BigData</Text>
+        <Card style={{padding: 10, margin: 10 }}>
+            <Title style = {styles.cardTitle}>Week 1</Title>
+            <Text style= {styles.cardText}>GitForked vs. OnlySpans</Text>
+            <Text style= {styles.cardText}>Damons Devs vs. Ahmeds Algos</Text>
+            <Text style= {styles.cardText}>Kyles KeyBoards vs. Jons JSONs</Text>
+            <Text style= {styles.cardText}>Kristines Kotlin vs. Brians BigData</Text>
         </Card>
         <Card style={{padding: 10, margin: 10}}>
-            <Title>Week 2</Title>
-            <Text>GitForked vs. Ahmed Algos</Text>
-            <Text>Damons Devs vs. Jons JSONS</Text>
-            <Text>Kyles KeyBoards vs. Brians BigData</Text>
-            <Text>Kristines Kotlin vs. OnlySpans</Text>
+            <Title style = {styles.cardTitle}>Week 2</Title>
+            <Text style= {styles.cardText}>GitForked vs. Ahmed Algos</Text>
+            <Text style= {styles.cardText}>Damons Devs vs. Jons JSONS</Text>
+            <Text style= {styles.cardText}>Kyles KeyBoards vs. Brians BigData</Text>
+            <Text style= {styles.cardText}>Kristines Kotlin vs. OnlySpans</Text>
         </Card>
         <Card style={{padding: 10, margin: 10}}>
-            <Title>Week 3</Title>
-            <Text>GitForked vs. Jons JSONs</Text>
-            <Text>Damons Devs vs. Brians BigData</Text>
-            <Text>Kyles KeyBoards vs. OnlySpans</Text>
-            <Text>Kristines Kotlin vs. Ahmed Algos</Text>
+            <Title style = {styles.cardTitle}>Week 3</Title>
+            <Text style= {styles.cardText}>GitForked vs. Jons JSONs</Text>
+            <Text style= {styles.cardText}>Damons Devs vs. Brians BigData</Text>
+            <Text style= {styles.cardText}>Kyles KeyBoards vs. OnlySpans</Text>
+            <Text style= {styles.cardText}>Kristines Kotlin vs. Ahmed Algos</Text>
         </Card>
         <Card style={{padding: 10, margin: 10}}>
-            <Title>Week 4</Title>
-            <Text>GitForked vs. Brians BigData</Text>
-            <Text>Damons Devs vs. OnlySpans</Text>
-            <Text>Kyles KeyBoards vs. Ahmeds Algos</Text>
-            <Text>Kristines Kotlin vs. Jons JSONs</Text>
+            <Title style = {styles.cardTitle}>Week 4</Title>
+            <Text style= {styles.cardText}>GitForked vs. Brians BigData</Text>
+            <Text style= {styles.cardText}>Damons Devs vs. OnlySpans</Text>
+            <Text style= {styles.cardText}>Kyles KeyBoards vs. Ahmeds Algos</Text>
+            <Text >Kristines Kotlin vs. Jons JSONs</Text>
         </Card>
+        
         <HeaderGraphic>
                <RightCircle/>
                <LeftCircle/>
@@ -51,12 +52,22 @@ export default ScheduleScreen = () => {
         container: {
             flex: 1,
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
             // backgroundColor: '#8022d9',
         },
         title:{
             fontSize: 35,
-
+            alignItems: "flex-start",
+        },
+        cardTitle:{
+            color: "#8022d9",
+            marginBottom: 3,
+            // flex: 1,
+            // flexDirection: 'row',
+        },
+        cardText:{
+            padding: 20,
+            marginBottom: 3,
         }
         
     })
