@@ -1,21 +1,22 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image } from "react-native"
+import { View, Text, StyleSheet, Image} from "react-native"
 import announcement from '../images/announcement.png'
 import styled from "styled-components";
 import { color } from 'react-native-reanimated';
+import { Title } from 'native-base';
+
 
 export default HomeScreen = () => {
     return (
-       <View style={ styles.container }>
-            
-            <View style ={styles.imageBackground}>
-                <Image source={announcement} style={styles.backgroundImage}/>
-                <Text style={styles.imageText}>                 Announcements!</Text>
-            </View>
-            <HeaderGraphic>
-               <RightCircle/>
-               <LeftCircle/>
-           </HeaderGraphic>
+        <View style={styles.container}>
+            <Title style={styles.title}>Announcements!</Title>
+        {/* <View style ={styles.imageBackground}> */}
+            <Image source={announcement} style={styles.Image}/>
+            {/* </View> */}
+        <HeaderGraphic>
+            <RightCircle/>
+            <LeftCircle/>
+        </HeaderGraphic>
         </View>
         
     )
@@ -24,29 +25,24 @@ export default HomeScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-    backgroundColor: "#8f32a8",   
-    },
-    imageBackground:{
-        position: "absolute",
-        marginBottom: 1,
-        opacity: 0.5,
-        backgroundColor: "#ffff",
-        height: 1000,
-    },
-    backgroundImage:{
-        // width: 100,
-        // height: 100,
-        flex: 3,
-        resizeMode: 'cover',
-
-    },
-    imageText:{
-        fontSize: 30,
         flex: 1,
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-start",
+        backgroundColor: "#ffff",
+           
+    },
+    Image:{
+        width: "100%",
+         height: 500,
+         overflow: "hidden",        
+        // resizeMode: 'cover',
+        
 
-    }
+    },
+    title:{
+        fontSize: 29,
+        alignItems: "flex-start",
+    },
 
 })
 const RightCircle = styled.View`
