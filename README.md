@@ -12,6 +12,7 @@ A mobile messaging app developed for Rec sports leagues.
 LeagueChat is a full-Stack mobile application that allows users to communicate via text message with each other. It also provides information about games, and any announcements that might be pertant to the league.
 
 # Intro Video
+[LeagueChat](https://youtu.be/6L0nvBsJKe4)
 
 # Technologies
 * React Native - version 0.63
