@@ -21,7 +21,8 @@ LeagueChat is a full-Stack mobile application that allows users to communicate v
 
 ## Setup
 1. Clone this repository down to your local computer.
-2. In Command line, 
+2. In Command line, run Expo Start. If you do not have Expo install run the following code in your terminal - ```npm install --global expo-cli```
+3. Launch a iOS simulator.
 
 ## Code Examples
 ```javascript
