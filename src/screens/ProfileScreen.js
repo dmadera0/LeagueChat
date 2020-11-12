@@ -20,14 +20,15 @@ export default ProfileScreen = () => {
         }
     };
     return (
+        <Container>
         <View style={styles.container}>
         <Title style={styles.title}>Profile</Title>
-        <Text medium bold margin="16px 0 32px 0">
+        <Text large bold margin="16px 0 32px 0">
         {user.username}
         </Text>
 
         <Logout onPress={logOut}>
-                <Text medium bold color="#23a8d9">
+                <Text large bold color="#23a8d9">
                     Log out
                 </Text>
             </Logout>
@@ -36,6 +37,7 @@ export default ProfileScreen = () => {
             <LeftCircle/>
         </HeaderGraphic>
         </View>   
+        </Container>
        
     );
 };
@@ -45,8 +47,10 @@ export default ProfileScreen = () => {
 
 const styles = StyleSheet.create({
     title:{
-        fontSize: 29,
+        fontSize: 45,
         alignItems: "flex-start",
+        height: "60%",
+        right: "30%",
 
     },
     container: {
@@ -89,5 +93,7 @@ width: 100%;
 top: -50px;
 z-index: -100;
 `;
+
+
 
 
