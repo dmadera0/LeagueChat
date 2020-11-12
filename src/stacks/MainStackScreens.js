@@ -47,7 +47,7 @@ export default MainStackScreens = () => {
 
             }
 
-            return <Ionicons name={iconName} size={24} color={focused ? "#ffffff" : "#666666"} />;
+            return <Ionicons name={iconName} size={24} color={focused ? "#ffffff" : "#bfbfbf"} />;
 
         }
     })
