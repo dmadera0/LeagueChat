@@ -1,11 +1,8 @@
 import React, {useContext,useState} from "react";
 import styled from "styled-components";
-
 import Text from '../components/Text'
-
 import { FirebaseContext } from "../context/FirebaseContext";
 import { UserContext } from "../context/UserContext";
-
 export default SignInScreen = ({navigation}) => {
     const [username, setUsername] = useState();
     const [email, setEmail] = useState()
