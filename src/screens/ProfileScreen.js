@@ -2,12 +2,9 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { View, StyleSheet } from "react-native"
 import { Container, Title } from 'native-base';
-
 import { UserContext } from "../context/UserContext";
 import { FirebaseContext } from "../context/FirebaseContext";
-
 import Text from "../components/Text";
-
 export default ProfileScreen = () => {
     const [user, setUser] = useContext(UserContext);
     const firebase = useContext(FirebaseContext);

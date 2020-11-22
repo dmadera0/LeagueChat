@@ -1,9 +1,6 @@
 import React, {useContext} from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-
 import { UserContext } from "../context/UserContext";
-
-
 import AuthStackScreens from "./AuthStackScreens";
 import MainStackScreens from "./MainStackScreens";
 import LoadingScreen from "../screens/LoadingScreen";

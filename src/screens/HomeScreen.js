@@ -10,9 +10,7 @@ export default HomeScreen = () => {
     return (
         <View style={styles.container}>
             <Title style={styles.title}>Announcements!</Title>
-        {/* <View style ={styles.imageBackground}> */}
             <Image source={announcement} style={styles.Image}/>
-            {/* </View> */}
         <HeaderGraphic>
             <RightCircle/>
             <LeftCircle/>
@@ -35,7 +33,7 @@ const styles = StyleSheet.create({
         width: "100%",
          height: 500,
          overflow: "hidden",        
-        // resizeMode: 'cover',
+
         
 
     },

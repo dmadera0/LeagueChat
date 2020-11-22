@@ -1,5 +1,4 @@
 import React, { createContext } from "react";
-
 import firebase from "firebase";
 import "firebase/auth";
 import "firebase/firestore";
